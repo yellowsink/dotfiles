@@ -14,3 +14,6 @@ end
 
 # gomi!!!
 alias rm=gomi
+
+# chezmoi easier™️
+alias chz=chezmoi
