@@ -6,3 +6,11 @@ if not pgrep -f ssh-agent > /dev/null
 end
 # set $EDITOR to micro
 export EDITOR="micro"
+
+# stop looking for packages k thx
+function fish_command_not_found
+    echo "fish: Unknown command: " $argv[1]
+end
+
+# gomi!!!
+alias rm=gomi
