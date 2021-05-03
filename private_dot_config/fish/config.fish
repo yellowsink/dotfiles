@@ -17,3 +17,6 @@ alias rm=gomi
 
 # chezmoi easier™️
 alias chz=chezmoi
+
+# exa!
+alias ls=exa
