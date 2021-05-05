@@ -51,3 +51,4 @@
 
 (package! web-mode)
 (package! go-mode)
+(package! neotree)
