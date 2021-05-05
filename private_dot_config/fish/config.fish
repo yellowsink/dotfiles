@@ -4,8 +4,9 @@ alias sudo="echo 'sudo? yeah no you have doas. SMH you need to change your muscl
 if not pgrep -f ssh-agent > /dev/null
     eval (ssh-agent -c) > /dev/null
 end
-# set $EDITOR to micro
-export EDITOR="micro"
+
+# set $EDITOR
+export EDITOR="nvim"
 
 # stop looking for packages k thx
 function fish_command_not_found
@@ -20,3 +21,6 @@ alias chz=chezmoi
 
 # exa!
 alias ls=exa
+
+# my PATH!
+export PATH="$PATH:/home/cain/.emacs.d/bin:/home/cain/.dotnet/tools"
