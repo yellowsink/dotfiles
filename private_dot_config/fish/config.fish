@@ -18,6 +18,11 @@ alias rm=gomi
 
 # chezmoi easier™️
 alias chz=chezmoi
+alias che="chezmoi edit"
+alias chd="chezmoi cd"
+alias cha="chezmoi add"
+alias chy="chezmoi apply -v"
+alias chu="chezmoi update -v"
 
 # exa!
 alias ls=exa
