@@ -211,7 +211,7 @@ exec_always ~/.screenlayout/default.sh
 
 # G A P S
 gaps inner 10
-gaps outer 5
+gaps outer 0
 
 # Hotkeys
 bindsym Control+Print exec flameshot gui
