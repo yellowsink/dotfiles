@@ -49,7 +49,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -245,8 +245,8 @@ exec_always copyq
 # make a my notifications work
 exec_always dunst
 
-# ulancher
-exec_always ulauncher --hide-window
+# load f.lux
+exec fluxgui
 
 # Misc startup apps - don't open on i3 reload
 exec megasync
