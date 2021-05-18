@@ -53,3 +53,4 @@
 (package! go-mode)
 (package! neotree)
 (package! csharp-mode)
+(package! rust-mode)
