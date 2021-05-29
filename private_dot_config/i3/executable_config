@@ -225,6 +225,9 @@ exec_always feh --bg-fill ~/Nextcloud/Pictures/Your\ Name.\ wallpaper.jpg
 # Start IBUS for Japanese IME
 exec_always ibus-daemon -drx
 
+# Get a Polkit agent going
+exec_always /usr/lib/polkit-kde-authentication-agent-1
+
 # Set tablet area
 # this is calculated for a CTL460 to
 # have a 32.5x18.2mm area (almost) perfectly centered
