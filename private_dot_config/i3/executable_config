@@ -201,7 +201,7 @@ no_focus [class="plasmashell" window_type="notification"]
 
 
 # Picom
-exec_always picom --experimental-backends
+exec_always picom --experimental-backends --vsync
 
 # disable borders
 for_window [class=".*"] border pixel 0
