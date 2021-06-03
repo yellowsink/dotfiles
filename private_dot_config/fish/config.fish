@@ -27,5 +27,11 @@ alias chu="chezmoi update -v"
 # exa!
 alias ls=exa
 
+# git easier™️
+alias gitc="git commit -am"
+alias gitp="git push"
+alias gitr="git reset --hard HEAD"
+alias gita="git add ."
+
 # my PATH!
 export PATH="$PATH:/home/cain/.emacs.d/bin:/home/cain/.dotnet/tools"
