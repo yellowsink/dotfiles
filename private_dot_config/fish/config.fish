@@ -33,5 +33,8 @@ alias gitp="git push"
 alias gitr="git reset --hard HEAD"
 alias gita="git add ."
 
+# when the pipewire
+alias help_mah_audio_broke="systemctl restart --user pipewire.service pipewire-media-session.service pipewire-pulse.service pipewire.socket pipewire-pulse.socket"
+
 # my PATH!
 export PATH="$PATH:/home/cain/.emacs.d/bin:/home/cain/.dotnet/tools"
