@@ -19,12 +19,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# ssh agent
-if [[ $(pgrep ssh-agent | wc -l) == ")" ]]; then
-	AGENT_PID=$(ssh-agent | cut -c11-)
-	disown $AGENT_PID
-fi
-
 # Fix bindings
 source "${HOME}/.zshinput"
 
