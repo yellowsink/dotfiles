@@ -1,0 +1,62 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd beep extendedglob notify
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/cain/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# ssh agent
+if [[ $(pgrep ssh-agent | wc -l) == ")" ]]; then
+	AGENT_PID=$(ssh-agent | cut -c11-)
+	disown $AGENT_PID
+fi
+
+# Fix bindings
+source "${HOME}/.zshinput"
+
+# set $EDITOR
+export EDITOR="nvim"
+
+# gomi
+alias rm=gomi
+
+# chezmoi easier™️
+alias chz=chezmoi
+alias che="chezmoi edit"
+alias chd="chezmoi cd"
+alias cha="chezmoi add"
+alias chy="chezmoi apply -v"
+alias chu="chezmoi update -v"
+
+
+# exa
+alias ls=exa
+
+# git easier™️
+alias gitc="git commit -am"
+alias gitp="git push"
+alias gitr="git reset --hard HEAD"
+alias gita="git add ."
+# load zgenom
+source "${HOME}/.zgenom/zgenom.zsh"
+
+
+# my PATH
+export PATH="$PATH:/home/cain/.emacs.d/bin:/home/cain/.dotnet/tools"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
