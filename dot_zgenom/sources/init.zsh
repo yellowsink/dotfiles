@@ -5,16 +5,24 @@
 export PMSPEC=0fiPs
 export ZPFX=/home/cain/.zgenom/polaris
 
-ZGENOM_PLUGINS=(hkupty/ssh-agent/___ zsh-users/zsh-autosuggestions/___ zsh-users/zsh-completions/___ zsh-users/zsh-history-substring-search/___ romkatv/powerlevel10k/___ zsh-users/zsh-syntax-highlighting/___)
+ZGENOM_PLUGINS=(romkatv/powerlevel10k/___ zsh-users/zsh-history-substring-search/___ zsh-users/zsh-completions/___ zsh-users/zsh-syntax-highlighting/___ zsh-users/zsh-autosuggestions/___ zsh-users/zsh-history-substring-search/___ zsh-users/zsh-completions/___ zsh-users/zsh-completions/___ zsh-users/zsh-autosuggestions/___ romkatv/powerlevel10k/___ zsh-users/zsh-history-substring-search/___ zsh-users/zsh-completions/___ zsh-users/zsh-completions/___ zsh-users/zsh-autosuggestions/___ romkatv/powerlevel10k/___ zsh-users/zsh-history-substring-search/___ zsh-users/zsh-completions/___ zsh-users/zsh-completions/___ zsh-users/zsh-autosuggestions/___ romkatv/powerlevel10k/___ zsh-users/zsh-history-substring-search/___ zsh-users/zsh-completions/___ zsh-users/zsh-completions/___ zsh-users/zsh-autosuggestions/___ zsh-users/zsh-syntax-highlighting/___ romkatv/powerlevel10k/___ zsh-users/zsh-history-substring-search/___ zsh-users/zsh-completions/___ zsh-users/zsh-autosuggestions/___)
 
 ZSH=/home/cain/.zgenom/sources/ohmyzsh/ohmyzsh/___
 
 # ### Plugins & Completions
-fpath=(/home/cain/.zgenom/sources/hkupty/ssh-agent/___ ${fpath})
+fpath=(/home/cain/.zgenom/sources/romkatv/powerlevel10k/___ /home/cain/.zgenom/sources/zsh-users/zsh-syntax-highlighting/___ /home/cain/.zgenom/sources/zsh-users/zsh-history-substring-search/___ /home/cain/.zgenom/sources/zsh-users/zsh-completions/___ /home/cain/.zgenom/sources/zsh-users/zsh-autosuggestions/___ ${fpath})
 
 # ### General modules
 typeset -ga zsh_loaded_plugins
-zsh_loaded_plugins+=( "hkupty/ssh-agent" )
-ZERO="/home/cain/.zgenom/sources/hkupty/ssh-agent/___/ssh-agent.plugin.zsh" source "/home/cain/.zgenom/sources/hkupty/ssh-agent/___/ssh-agent.plugin.zsh"
+zsh_loaded_plugins+=( "zsh-users/zsh-autosuggestions" )
+ZERO="/home/cain/.zgenom/sources/zsh-users/zsh-autosuggestions/___/zsh-autosuggestions.plugin.zsh" source "/home/cain/.zgenom/sources/zsh-users/zsh-autosuggestions/___/zsh-autosuggestions.plugin.zsh"
+zsh_loaded_plugins+=( "zsh-users/zsh-completions" )
+ZERO="/home/cain/.zgenom/sources/zsh-users/zsh-completions/___/zsh-completions.plugin.zsh" source "/home/cain/.zgenom/sources/zsh-users/zsh-completions/___/zsh-completions.plugin.zsh"
+zsh_loaded_plugins+=( "zsh-users/zsh-history-substring-search" )
+ZERO="/home/cain/.zgenom/sources/zsh-users/zsh-history-substring-search/___/zsh-history-substring-search.plugin.zsh" source "/home/cain/.zgenom/sources/zsh-users/zsh-history-substring-search/___/zsh-history-substring-search.plugin.zsh"
+zsh_loaded_plugins+=( "zsh-users/zsh-syntax-highlighting" )
+ZERO="/home/cain/.zgenom/sources/zsh-users/zsh-syntax-highlighting/___/zsh-syntax-highlighting.plugin.zsh" source "/home/cain/.zgenom/sources/zsh-users/zsh-syntax-highlighting/___/zsh-syntax-highlighting.plugin.zsh"
+zsh_loaded_plugins+=( "romkatv/powerlevel10k" )
+ZERO="/home/cain/.zgenom/sources/romkatv/powerlevel10k/___/powerlevel10k.zsh-theme" source "/home/cain/.zgenom/sources/romkatv/powerlevel10k/___/powerlevel10k.zsh-theme"
 
 # }}}
