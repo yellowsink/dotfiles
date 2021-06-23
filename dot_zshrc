@@ -52,5 +52,8 @@ source "${HOME}/.zgenom/zgenom.zsh"
 # my PATH
 export PATH="$PATH:/home/cain/.emacs.d/bin:/home/cain/.dotnet/tools"
 
+# Linuxbrew
+eval "$(/home/cain/.linuxbrew/bin/brew shellenv)"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
