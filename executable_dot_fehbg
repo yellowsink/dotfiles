@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/cain/Nextcloud/unix-light-wallpaper/wallpapers/arch_wallpaper.png' 
