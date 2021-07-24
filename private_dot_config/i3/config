@@ -175,8 +175,13 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
+# Audio
+exec_always pipewire
+exec_always pipewire-pulse
+exec_always pipewire-media-session
+
 # Picom
-exec_always picom --experimental-backends --vsync
+exec_always picom --vsync
 
 # disable borders
 for_window [class=".*"] border pixel 0
