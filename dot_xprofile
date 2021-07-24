@@ -1,1 +1,5 @@
 setxkbmap gb -variant colemak
+/usr/bin/pipewire
+/usr/bin/pipewire-pulse
+/usr/bin/pipewire-media-session
+exec openbox-session
