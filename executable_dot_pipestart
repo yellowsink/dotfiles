@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ $(pidof systemd || echo "no sysd") = "no sysd" ] ; then
+    pipewire &
+    pipewire-pulse &
+    pipewire-media-session &
+fi

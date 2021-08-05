@@ -176,9 +176,7 @@ mode "resize" {
 bindsym $mod+p mode "resize"
 
 # Audio
-exec_always pipewire
-exec_always pipewire-pulse
-exec_always pipewire-media-session
+exec ~/.pipestart
 
 # Picom
 exec_always picom --vsync
