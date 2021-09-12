@@ -216,6 +216,9 @@ exec_always xinput --set-prop 11 'libinput Accel Profile Enabled' 0, 0
 exec_always emote
 exec_always copyq
 
+# bind hotkey for file manager
+bindsym $mod+q exec pcmanfm
+
 # make a my notifications work
 exec_always dunst
 
