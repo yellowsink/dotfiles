@@ -182,7 +182,7 @@ exec ~/.pipestart
 exec_always picom --vsync
 
 # disable borders
-# for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 0
 
 # Set my screen correctly
 exec_always ~/.screenlayout/default.sh
