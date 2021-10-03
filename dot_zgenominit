@@ -1,0 +1,14 @@
+source "${HOME}/.zgenom/zgenom.zsh"
+zgenom autoupdate --background
+
+if ! zgenom saved; then
+	zgenom loadall << EOF
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+romkatv/powerlevel10k powerlevel10k
+EOF
+	
+	zgenom save
+fi
