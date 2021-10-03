@@ -52,10 +52,14 @@ source "${HOME}/.zgenom/zgenom.zsh"
 alias bsd3="cp ~/.bsd3 LICENCE.md"
 
 # my PATH
-export PATH="$PATH:/home/cain/.emacs.d/bin:/home/cain/.dotnet/tools"
+export PATH="$PATH:$HOME/.emacs.d/bin:$HOME/.dotnet/tools"
 
 # Linuxbrew
-eval "$(/home/cain/.linuxbrew/bin/brew shellenv)"
+if [ -d "$HOME/.linuxbrew" ]; then
+	eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+else
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 # Zoxide
 eval "$(zoxide init zsh)"
