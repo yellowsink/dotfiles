@@ -183,7 +183,7 @@ bindsym $mod+p mode "resize"
 exec ~/.pipestart
 
 # Picom
-exec_always picom --vsync
+exec_always picom
 
 # disable borders
 for_window [class=".*"] border pixel 0
@@ -196,7 +196,7 @@ gaps inner 10
 gaps outer 0
 
 # Hotkeys
-bindsym Control+Print exec flameshot gui
+bindsym Print exec flameshot gui
 
 # Start Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
