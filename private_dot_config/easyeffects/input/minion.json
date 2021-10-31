@@ -1,0 +1,31 @@
+{
+    "input": {
+        "autogain": {
+            "input-gain": 0.0,
+            "output-gain": 0.0,
+            "reference": "Geometric Mean",
+            "target": -30.0
+        },
+        "blocklist": [],
+        "pitch": {
+            "cents": 0,
+            "crispness": 3,
+            "faster": false,
+            "formant-preserving": false,
+            "input-gain": 0.0,
+            "octaves": 0,
+            "output-gain": 0.0,
+            "semitones": 8
+        },
+        "plugins_order": [
+            "rnnoise",
+            "autogain",
+            "pitch"
+        ],
+        "rnnoise": {
+            "input-gain": 7.0,
+            "model-path": "",
+            "output-gain": -7.0
+        }
+    }
+}

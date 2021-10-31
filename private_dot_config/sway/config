@@ -192,15 +192,12 @@ for_window [class="Rofi"] opacity 0.8
 for_window [class="discord"] opacity 0.9
 for_window [class="xterm-256color"] opacity 0.9
 
-# Set my screen correctly
-exec_always ~/.screenlayout/default.sh
-
 # G A P S
 gaps inner 10
 gaps outer 0
 
 # Hotkeys
-bindsym Print exec flameshot gui
+bindsym Print exec wayland-screenshot
 
 # bar
 bar {
@@ -214,7 +211,7 @@ output "*" bg ~/MEGA/photoshop/niche_syndrome_wall.png fill
 exec_always ibus-daemon -drx
 
 # Get a Polkit agent going
-exec_always /usr/lib/polkit-kde-authentication-agent-1
+exec_always /usr/lib/xfce-polkit/xfce-polkit
 
 # Set tablet area
 exec_always ~/tabletconfigs/osu.sh
@@ -223,7 +220,7 @@ exec_always ~/tabletconfigs/osu.sh
 exec_always xinput --set-prop 11 'libinput Accel Profile Enabled' 0, 0
 
 # Emoji Picker & Clipboard manager
-exec_always emote
+bindsym Ctrl+Alt+e exec emote
 exec_always copyq
 
 # bind hotkey for file manager
