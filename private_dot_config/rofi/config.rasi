@@ -1,3 +1,2 @@
-configuration {
-	theme: "/usr/share/rofi/themes/Monokai.rasi";
-}
+configuration {}
+@theme "/usr/share/rofi/themes/Monokai.rasi"
