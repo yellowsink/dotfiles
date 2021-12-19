@@ -1,6 +1,7 @@
 source "${HOME}/.zgenom/zgenom.zsh"
 zgenom autoupdate --background
 
+# install all of these plugins
 if ! zgenom saved; then
 	zgenom loadall << EOF
 zsh-users/zsh-autosuggestions
@@ -9,6 +10,9 @@ zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
 romkatv/powerlevel10k powerlevel10k
 EOF
+
+	# zsh-history-substring-search requires oh-my-zsh - yes this annoys me
+	zgenom ohmyzsh
 	
 	zgenom save
 fi
