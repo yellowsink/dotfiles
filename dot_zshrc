@@ -1,3 +1,8 @@
+# load tmux
+if [ $TERM != "tmux-256color" ]; then
+	tmux && exit
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -18,6 +23,9 @@ zstyle :compinstall filename '/home/cain/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# load zgenom
+source "${HOME}/.zgenominit"
 
 # Fix bindings
 source "${HOME}/.zshinput"
@@ -41,9 +49,6 @@ alias gitc="git commit -am"
 alias gitp="git push"
 alias gitr="git reset --hard HEAD"
 alias gita="git add ."
-
-# load zgenom
-source "${HOME}/.zgenominit"
 
 # ye
 alias bsd3="cp ~/.bsd3 LICENCE.md"
