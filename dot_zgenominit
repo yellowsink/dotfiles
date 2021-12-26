@@ -7,12 +7,9 @@ if ! zgenom saved; then
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions
-zsh-users/zsh-history-substring-search
 romkatv/powerlevel10k powerlevel10k
+joshskidmore/zsh-fzf-history-search
 EOF
-
-	# zsh-history-substring-search requires oh-my-zsh - yes this annoys me
-	zgenom ohmyzsh
 	
 	zgenom save
 fi
