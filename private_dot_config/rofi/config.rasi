@@ -1,2 +1,4 @@
 configuration {}
-@theme "/usr/share/rofi/themes/Monokai.rasi"
+//@theme "/usr/share/rofi/themes/Monokai.rasi"
+//@theme "/usr/share/rofi/themes/iggy.rasi"
+@theme "/usr/share/rofi/themes/lb.rasi"
