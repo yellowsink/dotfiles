@@ -31,7 +31,7 @@ source "${HOME}/.zgenominit"
 source "${HOME}/.zshinput"
 
 # set $EDITOR
-export EDITOR="nvim"
+export EDITOR="micro"
 
 # chezmoi easier™️
 alias chz=chezmoi
