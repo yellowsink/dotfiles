@@ -65,8 +65,14 @@ alias gitc="git commit -am"
 alias gitp="git push"
 alias gitr="git reset --hard HEAD"
 alias gita="git add ."
+alias gitac="git add . && git commit -am"
 # licenses #
 alias bsd3="cp ~/.bsd3 LICENCE.md"
+# i am caving in and adding a mkcd #
+mkz() {
+	mkdir -p $1
+	z $1
+}
 
 #############
 #           #
