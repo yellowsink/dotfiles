@@ -59,7 +59,7 @@ alias cha="chezmoi add"
 alias chy="chezmoi apply -v"
 alias chu="chezmoi update -v"
 # exa #
-alias ls=exa
+alias ls="exa --icons --colour-scale"
 # git #
 alias gitc="git commit -am"
 alias gitp="git push"
