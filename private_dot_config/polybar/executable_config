@@ -42,8 +42,8 @@ height = 18
 radius = 0
 fixed-center = true
 
-background = ${colors.dark_main}
-foreground = ${colors.light_main}
+background = ${colors.light_main}
+foreground = ${colors.dark_main}
 
 padding-right = 1
 
@@ -76,7 +76,7 @@ label-mode-background = ${colors.neutral_2}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.dark_alt}
+label-focused-background = ${colors.light_alt}
 label-focused-padding = 1
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
