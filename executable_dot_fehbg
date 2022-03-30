@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill "/home/$(whoami)/MEGA/photoshop/niche_syndrome_wall.png"
+feh --no-fehbg --bg-fill /home/$(whoami)/Pictures/catppuccin-magenta-cat.png 
