@@ -226,9 +226,6 @@ bindsym $mod+q exec pcmanfm
 # make a my notifications work
 exec_always dunst
 
-# load f.lux
-exec fluxgui
-
 # Misc startup apps - don't open on i3 reload
 exec megasync
 exec firefox-developer-edition
