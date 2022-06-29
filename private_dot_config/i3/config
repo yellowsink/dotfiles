@@ -188,6 +188,9 @@ exec_always picom
 # disable borders
 for_window [class=".*"] border pixel 0
 
+# fix EA origin
+for_window [instance="origin.exe"] floating enable
+
 # Set my screen correctly
 exec_always ~/.screenlayout/default.sh
 
