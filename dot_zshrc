@@ -90,7 +90,7 @@ source "${HOME}/.zgenominit"
 source "${HOME}/.zshinput"
 
 # PATH #
-export PATH="$PATH:$HOME/.emacs.d/bin:$HOME/.dotnet/tools:/home/cain/.local/bin"
+export PATH="$PATH:$HOME/.emacs.d/bin:$HOME/.dotnet/tools:$HOME/.local/bin"
 
 # Micro themes #
 export MICRO_TRUECOLOR=1

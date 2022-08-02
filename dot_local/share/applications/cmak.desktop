@@ -2,4 +2,4 @@
 Type=Application
 Version=1.0
 Name=cmak layout
-Exec=setxkbmap gb -variant colemak
+Exec=setxkbmap us -variant colemak
