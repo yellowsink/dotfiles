@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill /home/$(whoami)/Pictures/catppuccin-magenta-cat.png 
+feh --no-fehbg --bg-fill /home/$(whoami)/Pictures/wallpapers_opal58/2.jpg 
