@@ -45,7 +45,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 20- # decrease screen brigh
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -184,6 +184,8 @@ input * {
 	xkb_variant "colemak"
 }
 
+include ~/.config/sway/outputs
+
 # transparency
 for_window [class="Rofi"] opacity 0.8
 for_window [class="discord"] opacity 0.9
@@ -202,7 +204,7 @@ bar {
 }
 
 # Wallpaper
-output "*" bg ~/MEGA/photoshop/niche_syndrome_wall.png fill
+output "*" bg ~/Pictures/wallpapers_opal58/2.jpg fill
 
 # Get a Polkit agent going
 exec_always /usr/lib/xfce-polkit/xfce-polkit
