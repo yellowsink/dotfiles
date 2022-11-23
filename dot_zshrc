@@ -106,6 +106,9 @@ fi
 # Zoxide #
 eval "$(zoxide init zsh)"
 
+# Direnv #
+eval "$(direnv hook zsh)"
+
 # gpg thing, gh docs said to do #
 export GPG_TTY=$(tty)
 
