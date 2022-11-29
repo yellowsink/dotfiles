@@ -50,7 +50,7 @@ padding-right = 1
 font-0 = "mononoki Nerd Font Mono:pixelsize=10;1"
 
 modules-left = i3 xwindow
-modules-right = pulseaudio backlight rootfs osufs memory cpu wlan battery date
+modules-right = polybar-playerctl pulseaudio backlight rootfs osufs memory cpu wlan battery date
 
 tray-position = right
 tray-padding = 2
@@ -226,6 +226,15 @@ format-foreground = ${colors.dark_main}
 format-padding    = 1
 
 label = %date%%time%
+
+[module/polybar-playerctl]
+type = custom/script
+exec = ~/.config/polybar/polybar-playerctl.sh
+click-left = ~/.config/polybar/polybar-playerctl-playpause.sh
+
+format-suffix = " "
+format-prefix = " "
+format-background = ${colors.positive}
 
 [settings]
 screenchange-reload = true
