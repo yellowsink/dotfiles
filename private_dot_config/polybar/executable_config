@@ -232,8 +232,7 @@ type = custom/script
 exec = ~/.config/polybar/polybar-playerctl.sh
 click-left = ~/.config/polybar/polybar-playerctl-playpause.sh
 
-format-suffix = " "
-format-prefix = " "
+format-padding = 1
 format-background = ${colors.positive}
 
 [settings]
