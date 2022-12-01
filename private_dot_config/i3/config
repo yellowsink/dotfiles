@@ -210,18 +210,11 @@ exec_always ~/.fehbg
 # Start IBUS for Japanese IME
 exec_always ibus-daemon -drx
 
-# Get a Polkit agent going
-exec_always /usr/lib/polkit-kde-authentication-agent-1
-
 # Set tablet area
 exec_always ~/tabletconfigs/osu.sh
 
 # Disable mouse acceleration
 exec_always xinput --set-prop 11 'libinput Accel Profile Enabled' 0, 0
-
-# Emoji Picker & Clipboard manager
-exec_always emote
-exec_always copyq
 
 # bind hotkey for file manager
 bindsym $mod+q exec pcmanfm
@@ -230,9 +223,7 @@ bindsym $mod+q exec pcmanfm
 exec_always dunst
 
 # Misc startup apps - don't open on i3 reload
-exec megasync
+exec dex -a
 exec firefox-developer-edition
 exec discord
-exec nextcloud
-exec jetbrains-toolbox
-exec dropbox
+exec copyq
