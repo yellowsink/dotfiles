@@ -69,12 +69,6 @@
 			mkz() { mkdir -p $1; z $1 }
 			setopt beep extendedglob notify
 
-			if [ -d "$HOME/.linuxbrew" ]; then
-				eval "$($HOME/.linuxbrew/bin/brew shellenv)"
-			else
-				eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-			fi
-			
 			eval "$(zoxide init zsh)"
 			
 			eval "$(direnv hook zsh)"
@@ -110,7 +104,7 @@
 		};
 
 		autocd = true;
-	defaultKeymap = "emacs";
+		defaultKeymap = "emacs";
 
 		zplug = {
 			enable = true;
