@@ -25,7 +25,7 @@
 	# Environment vars
 	home.sessionVariables = {
 		EDITOR = "micro";
-		PATH = "$PATH:$HOME/.emacs.d/bin:$HOME/.dotnet/tools:$HOME/.local/bin";
+		PATH = "$PATH:$HOME/.emacs.d/bin:$HOME/.dotnet/tools:$HOME/.local/bin:$HOME/.cargo/bin";
 		MICRO_TRUECOLOR = 1;
 	};
 
