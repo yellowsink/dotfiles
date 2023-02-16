@@ -76,6 +76,22 @@
 			# gh docs said to do this #
 			export GPG_TTY=$(tty)
 
+			# load zgenom #
+			source ~/.zgenom/zgenom.zsh
+			zgenom autoupdate --background
+
+			if ! zgenom saved; then
+				zgenom loadall <<EOF
+				zsh-users/zsh-autosuggestions
+				zsh-users/zsh-syntax-highlighting
+				zsh-users/zsh-completions
+				romkatv/powerlevel10k powerlevel10k
+				joshskidmore/zsh-fzf-history-search
+EOF
+
+				zgenom save
+			fi
+
 			# fix my keybinds for home, end, etc #
 			source "$HOME/.zshinput"
 
@@ -105,17 +121,6 @@
 
 		autocd = true;
 		defaultKeymap = "emacs";
-
-		zplug = {
-			enable = true;
-			plugins = [
-				{ name = "zsh-users/zsh-autosuggestions"; }
-				{ name = "zsh-users/zsh-syntax-highlighting"; }
-				{ name = "zsh-users/zsh-completions"; }
-				{ name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
-				{ name = "joshskidmore/zsh-fzf-history-search"; }
-			];
-		};
 	};
 
 	programs.tmux = {
