@@ -187,6 +187,10 @@ input * {
 include ~/.config/sway/outputs
 
 # transparency
+blur enable
+corner_radius 5
+shadows enable
+
 for_window [class="Rofi"] opacity 0.8
 for_window [class="discord"] opacity 0.9
 for_window [class="xterm-256color"] opacity 0.9
