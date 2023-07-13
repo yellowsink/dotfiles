@@ -183,7 +183,8 @@ bindsym $mod+p mode "resize"
 exec ~/.pipestart
 
 # Picom
-exec_always picom
+# perf issues
+#exec_always picom
 
 # disable borders
 for_window [class=".*"] border pixel 0
