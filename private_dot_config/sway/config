@@ -184,6 +184,9 @@ input * {
 	xkb_variant "colemak"
 }
 
+# trackpad tap-to-click
+input 1267:12494:ELAN1201:00_04F3:30CE_Touchpad tap enabled
+
 include ~/.config/sway/outputs
 
 # transparency
@@ -203,9 +206,7 @@ gaps outer 0
 bindsym Print exec wayland-screenshot
 
 # bar
-bar {
-	swaybar_command waybar
-}
+bar swaybar_command waybar
 
 # Wallpaper
 output "*" bg ~/Pictures/wallpapers_opal58/2.jpg fill
