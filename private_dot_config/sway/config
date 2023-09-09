@@ -203,7 +203,7 @@ gaps inner 10
 gaps outer 0
 
 # Hotkeys
-bindsym Print exec wayland-screenshot
+bindsym Print exec flameshot gui
 
 # bar
 bar swaybar_command waybar

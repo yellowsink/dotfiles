@@ -65,13 +65,14 @@
 		};
 
 		initExtra = ''
-			gitd() { git diff $@ | delta --line-numbers --side-by-side }
-			mkz() { mkdir -p $1; z $1 }
 			setopt beep extendedglob notify
 
 			eval "$(zoxide init zsh)"
 			
 			eval "$(direnv hook zsh)"
+
+			gitd() { git diff $@ | delta --line-numbers --side-by-side }
+			mkz() { mkdir -p $1; z $1 }
 			
 			# gh docs said to do this #
 			export GPG_TTY=$(tty)
