@@ -198,12 +198,16 @@ for_window [class="Rofi"] opacity 0.8
 for_window [class="discord"] opacity 0.9
 for_window [class="xterm-256color"] opacity 0.9
 
+# fix origin
+for_window [instance="origin.exe"] floating enable
+
 # G A P S
 gaps inner 10
 gaps outer 0
 
 # Hotkeys
-bindsym Print exec flameshot gui
+# https://github.com/flameshot-org/flameshot/issues/1184#issuecomment-745316556
+bindsym Print exec QT_QPA_PLATFORM=xcb flameshot gui
 
 # bar
 bar swaybar_command waybar
