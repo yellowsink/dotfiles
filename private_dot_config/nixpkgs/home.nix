@@ -38,7 +38,7 @@
 		nodePackages.prettier
 		nodePackages.typescript
 		nodePackages.web-ext
-		nodePackages.wrangler
+		#nodePackages.wrangler
 	];
 
 	# Config my shell
