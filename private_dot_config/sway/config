@@ -207,7 +207,8 @@ gaps outer 0
 
 # Hotkeys
 # https://github.com/flameshot-org/flameshot/issues/1184#issuecomment-745316556
-bindsym Print exec QT_QPA_PLATFORM=xcb flameshot gui
+#bindsym Print exec QT_QPA_PLATFORM=xcb flameshot gui
+bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
 # bar
 bar swaybar_command waybar
