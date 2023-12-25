@@ -1,22 +1,16 @@
-configuration{
-    modi: "run,drun,window";
-    lines: 5;
-    font: "mononoki Nerd Font Mono 14";
-    show-icons: true;
-    icon-theme: "Oranchelo";
-    terminal: "st";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 﩯  window";
-    display-Network: " 󰤨  Network";
-    sidebar-mode: true;
-}
+* {
+    bg-col:  #1e1e2e;
+    bg-col-light: #1e1e2e;
+    border-col: #1e1e2e;
+    selected-col: #1e1e2e;
+    blue: #89b4fa;
+    fg-col: #cdd6f4;
+    fg-col2: #f38ba8;
+    grey: #6c7086;
 
-@theme "catppuccin-mocha"
+    width: 600;
+    font: "JetBrainsMono Nerd Font 14";
+}
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -66,6 +60,7 @@ listview {
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
     columns: 2;
+    lines: 5;
     background-color: @bg-col;
 }
 
@@ -99,4 +94,18 @@ button {
 button selected {
   background-color: @bg-col;
   text-color: @blue;
+}
+
+message {
+    background-color: @bg-col-light;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
 }
