@@ -214,7 +214,7 @@ bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 bar swaybar_command waybar
 
 # Wallpaper
-output "*" bg ~/Pictures/wallpapers_opal58/2.jpg fill
+output "*" bg ~/Pictures/TRII.png fill
 
 # supposed to set this i think? going off of
 # https://github.com/flameshot-org/flameshot/blob/master/docs/Sway%20and%20wlroots%20support.md
