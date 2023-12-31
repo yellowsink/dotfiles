@@ -11,4 +11,7 @@ return {
 	
 	-- I have tmux and i suspect this is causing my RAM problems
 	scrollback_lines          = 0,
+
+	-- Wezterm does not support Hyprland without crashing yet.
+	enable_wayland            = false,
 }
