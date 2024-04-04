@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/mode", "custom/media", "hyprland/window"],
     //"modules-center": ["sway/window"],
-    "modules-right": ["custom/playerctl", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "clock", "tray"],
+    "modules-right": ["custom/playerctl", "custom/ssdmnt", "custom/osumnt", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -116,6 +116,18 @@
         // "on-right-click": "sys-notif media",
         "on-scroll-up": "playerctl position 3+",
         "on-scroll-down": "playerctl position 3-"        
-    }
+    },
+    "custom/ssdmnt": {
+    	"format": "SSD mount: {} ",
+		"exec": "$HOME/.config/waybar/mount.sh /ssd y n 2> /dev/null",
+		"interval": 4, // should be >2, see fstab
+		"tooltip": false
+    },
+    "custom/osumnt": {
+       	"format": "osu: {} ",
+   		"exec": "$HOME/.config/waybar/mount.sh /osu-portable y n 2> /dev/null",
+   		"interval": 4, // should be >2, see fstab
+   		"tooltip": false
+    },
 }
 
