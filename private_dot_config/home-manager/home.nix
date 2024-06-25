@@ -32,13 +32,13 @@
 	# Install my packages
 	home.packages = with pkgs; [
 		bun
-		rustup
 		nodePackages.http-server
 		nodePackages.pnpm
 		nodePackages.prettier
 		nodePackages.typescript
 		nodePackages.web-ext
 		#nodePackages.wrangler
+		#waybar # the arch version of this has broken libs atm
 	];
 
 	# Config my shell
@@ -62,6 +62,9 @@
 			gitac = "gita && gitc";
 
 			bsd3 = "cp ~/.bsd3 LICENSE.md";
+
+			tsen = "doas tailscale set --exit-node=";
+			tsem = "doas tailscale set --exit-node=michiru";
 		};
 
 		initExtra = ''
