@@ -1,0 +1,45 @@
+[Unit]
+# This is just basic information about what steam-presence is.
+Description=Discord rich presence from Steam on Linux
+Documentation=https://github.com/JustTemmie/steam-presence
+
+[Service]
+# CHANGEME: This is the full command that is run to launch steam-presence.
+# If you installed steam-presence somewhere else, then you need to change this.
+ExecStart=python -u /home/sink/.local/share/steam-presence/main.py
+
+# This tells Systemd that steam-presence is a simple service:
+# When launched, the Python process stays running until the service exits.
+Type=simple
+
+# This tells the OS to treat steam-presence as a lowest-priority program.
+Nice=19
+
+# When steam-presence is told to exit, it throws a KeyboardInterrupt Python
+# exception.  This tells Systemd that it's OK, and that should count as a
+# normal program exit.
+SuccessExitStatus=130
+
+# This locks down what steam-presence is able to do.  It is not able to
+# get any more privileges than it already has, and almost the entire
+# filesystem is made read-only to it.  The only thing made read/write is
+# the directory where steam-presence lives.  That is so the icons.txt file
+# can be updated with new game icons (only when you use SteamGridDB).
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/sink/.local/share/steam-presence
+
+# This section is used when you run `systemctl --user enable steam-presence`.
+[Install]
+# WantedBy tells Systemd "when this service is enabled, it should be an
+# optional requirement of X".
+#
+# Normally, this is set to "multi-user.target".  In Systemd 'system mode',
+# where Systemd is managing services for the OS, "multi-user.target" is the
+# correct thing to use.  But because we are operating Systemd in 'user mode',
+# there is no "multi-user.target".  Instead, there is "default.target".
+#
+# Once the OS is up, Systemd starts up a user-mode instance for us, and looks
+# for any services that are "wanted by" the "default.target".  That is what
+# actually causes us to be launched at startup!
+WantedBy=default.target
