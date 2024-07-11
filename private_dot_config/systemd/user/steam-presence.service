@@ -7,6 +7,7 @@ Documentation=https://github.com/JustTemmie/steam-presence
 # CHANGEME: This is the full command that is run to launch steam-presence.
 # If you installed steam-presence somewhere else, then you need to change this.
 ExecStart=python -u /home/sink/.local/share/steam-presence/main.py
+Restart=on-failure
 
 # This tells Systemd that steam-presence is a simple service:
 # When launched, the Python process stays running until the service exits.

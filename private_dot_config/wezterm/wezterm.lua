@@ -13,5 +13,5 @@ return {
 	scrollback_lines          = 0,
 
 	-- Wezterm does not support Hyprland without crashing yet.
-	enable_wayland            = false,
+	-- enable_wayland            = false,
 }
