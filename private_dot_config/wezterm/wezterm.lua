@@ -1,7 +1,7 @@
 local wezterm = require "wezterm"
 
 return {
-	font                      = wezterm.font "CozetteDrawing",
+	font                      = wezterm.font_with_fallback { "CozetteDrawing", "gothic" },
 	font_size                 = 13,
 	--color_scheme              = "Catppuccin Mocha",
 	color_scheme              = "Japanesque",
