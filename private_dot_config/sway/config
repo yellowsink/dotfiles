@@ -172,6 +172,10 @@ bar swaybar_command waybar
 # Wallpaper
 output "*" bg ~/Pictures/TRII.png fill
 
+# why do you need to set your cursor in like 94565 different places on linux
+# wtf even is this seat directive
+seat seat0 xcursor_theme Vimix-white-cursors 24
+
 # supposed to set this i think? going off of
 # https://github.com/flameshot-org/flameshot/blob/master/docs/Sway%20and%20wlroots%20support.md
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
