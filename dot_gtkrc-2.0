@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/sink/.gtkrc-2.0.mine"
-gtk-theme-name="Catppuccin-Latte-Standard-Mauve-Light"
+gtk-theme-name="catppuccin-latte-mauve-standard+default"
 gtk-icon-theme-name="breeze"
 gtk-font-name="Manrope 10"
 gtk-cursor-theme-name="Vimix-white-cursors"
