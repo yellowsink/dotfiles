@@ -37,6 +37,7 @@
 		nodePackages.prettier
 		nodePackages.typescript
 		nodePackages.web-ext
+		nodePackages.zx
 		#nodePackages.wrangler
 		#waybar # the arch version of this has broken libs atm
 	];
@@ -95,6 +96,9 @@ EOF
 
 				zgenom save
 			fi
+
+			# load ruby env
+			eval "$(rbenv init - zsh)"
 
 			# fix my keybinds for home, end, etc #
 			source "$HOME/.zshinput"
