@@ -31,12 +31,18 @@
 
 	# Install my packages
 	home.packages = with pkgs; [
+		bun
 		nodePackages.http-server
 		nodePackages.pnpm
 		nodePackages.prettier
 		nodePackages.typescript
 		nodePackages.web-ext
 		nodePackages.zx
+		#nodePackages.wrangler
+		#waybar # the arch version of this has broken libs atm
+		# r lang env
+		(rWrapper.override{ packages = with rPackages; [languageserver httpgd]; })
+		radianWrapper
 	];
 
 	# Config my shell
