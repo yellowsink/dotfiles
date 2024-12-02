@@ -157,6 +157,8 @@ for_window [class="xterm-256color"] opacity 0.9
 # fix origin
 for_window [instance="origin.exe"] floating enable
 
+for_window [title="WolframNB"] floating enable
+
 for_window [title=".*Bitwarden.*"] floating enable
 
 # G A P S

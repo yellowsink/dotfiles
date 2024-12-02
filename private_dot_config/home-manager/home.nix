@@ -31,7 +31,6 @@
 
 	# Install my packages
 	home.packages = with pkgs; [
-		bun
 		nodePackages.http-server
 		nodePackages.pnpm
 		nodePackages.prettier
