@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     // "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "sway/window"],
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/playerctl", "sway/window"],
     //"modules-center": ["sway/window"],
-    "modules-right": ["custom/playerctl", "custom/ssdmnt", "custom/osumnt", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "clock", "tray"],
+    "modules-right": ["custom/ssdmnt", "custom/osumnt", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
         //"disable-scroll": true,

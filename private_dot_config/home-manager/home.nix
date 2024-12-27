@@ -66,8 +66,8 @@
 
 			bsd3 = "cp ~/.bsd3 LICENSE.md";
 
-			tsen = "doas tailscale set --exit-node=";
-			tsem = "doas tailscale set --exit-node=michiru";
+			tsen = "tailscale set --exit-node=";
+			tsem = "tailscale set --exit-node=michiru";
 		};
 
 		initExtra = ''
