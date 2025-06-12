@@ -33,15 +33,16 @@
 	home.packages = with pkgs; [
 		nodePackages.http-server
 		nodePackages.pnpm
-		nodePackages.prettier
+		#nodePackages.prettier
 		nodePackages.typescript
 		nodePackages.web-ext
 		nodePackages.zx
 		#nodePackages.wrangler
 		#waybar # the arch version of this has broken libs atm
-		# r lang env
-		(rWrapper.override{ packages = with rPackages; [languageserver httpgd]; })
-		radianWrapper
+		graalvmPackages.truffleruby
+
+		#(rWrapper.override{ packages = with rPackages; [languageserver httpgd]; })
+		#radianWrapper
 	];
 
 	# Config my shell
@@ -68,6 +69,8 @@
 
 			tsen = "tailscale set --exit-node=";
 			tsem = "tailscale set --exit-node=michiru";
+
+			ggmpeg = "ffmpeg -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128";
 		};
 
 		initExtra = ''
