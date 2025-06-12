@@ -140,8 +140,7 @@ input * {
 	xkb_variant "colemak"
 }
 
-# trackpad tap-to-click
-input 1267:12494:ELAN1201:00_04F3:30CE_Touchpad tap enabled
+input type:touchpad tap enabled
 
 include ~/.config/sway/outputs
 
@@ -192,9 +191,6 @@ include /etc/sway/config.d/50-systemd-user.conf
 
 # Set tablet area
 #exec_always ~/tabletconfigs/osu.sh
-
-# Disable mouse acceleration
-exec_always xinput --set-prop 11 'libinput Accel Profile Enabled' 0, 0
 
 # Emoji Picker & Clipboard manager
 bindsym Ctrl+Alt+e exec emote

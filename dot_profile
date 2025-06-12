@@ -3,16 +3,20 @@
 # Added by Toolbox App
 export PATH="$PATH:/home/sink/.local/share/JetBrains/Toolbox/scripts"
 
-export QT_QPA_PLATFORMTHEME=qt5ct
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_QPA_PLATFORM='wayland;xcb'
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
 export GDK_BACKEND=wayland,x11
-export XDG_CURRENT_DESKTOP=sway
+
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+
+export SDL_VIDEODRIVER=wayland
 
 export XCURSOR_SIZE=24
-export SDL_VIDEODRIVER=wayland
 export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=sway
-
+export XDG_CURRENT_DESKTOP=sway
