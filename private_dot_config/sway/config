@@ -174,7 +174,8 @@ bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 bar swaybar_command waybar
 
 # Wallpaper
-output "*" bg ~/Pictures/TRII.png fill
+#output "*" bg ~/Pictures/TRII.png fill
+exec_always swww-daemon; swww img /home/sink/Michicloud/431960_anasabdin/2987840102_botanical.gif -f Nearest
 
 # why do you need to set your cursor in like 94565 different places on linux
 # wtf even is this seat directive
