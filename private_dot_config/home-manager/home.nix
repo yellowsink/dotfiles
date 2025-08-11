@@ -33,16 +33,19 @@
 	home.packages = with pkgs; [
 		nodePackages.http-server
 		nodePackages.pnpm
-		#nodePackages.prettier
+		nodePackages.prettier
 		nodePackages.typescript
 		nodePackages.web-ext
 		nodePackages.zx
 		#nodePackages.wrangler
 		#waybar # the arch version of this has broken libs atm
-		graalvmPackages.truffleruby
-
+		# r lang env
 		#(rWrapper.override{ packages = with rPackages; [languageserver httpgd]; })
 		#radianWrapper
+		skrooge
+
+		rbenv
+		pcmanfm
 	];
 
 	# Config my shell
@@ -56,7 +59,7 @@
 			cha = "chz add";
 			chy = "chz apply -v";
 			chu = "chz update -v";
-			ls = "exa --icons --colour-scale";
+			ls = "eza --icons --colour-scale all";
 			lsl = "ls -lh --git";
 			gitc = "git commit -am";
 			gitp = "git push";
@@ -69,8 +72,6 @@
 
 			tsen = "tailscale set --exit-node=";
 			tsem = "tailscale set --exit-node=michiru";
-
-			ggmpeg = "ffmpeg -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128";
 		};
 
 		initExtra = ''
@@ -78,7 +79,7 @@
 
 			eval "$(zoxide init zsh)"
 			
-			eval "$(direnv hook zsh)"
+			#eval "$(direnv hook zsh)"
 
 			gitd() { git diff $@ | delta --line-numbers --side-by-side }
 			mkz() { mkdir -p $1; z $1 }

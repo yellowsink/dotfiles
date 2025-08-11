@@ -135,6 +135,12 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
+# passthrough mode for remmina to use super
+mode passthrough {
+	bindsym $mod+Insert mode default
+}
+bindsym $mod+Insert mode passthrough
+
 input * {
 	xkb_layout "us"
 	xkb_variant "colemak"
