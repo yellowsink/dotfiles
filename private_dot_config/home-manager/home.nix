@@ -130,7 +130,7 @@ EOF
 
 		history = {
 			size = 1000;
-			path = "$HOME/.histfile";
+			path = ".histfile";
 		};
 
 		autocd = true;
