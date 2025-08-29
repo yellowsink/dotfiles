@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons, "gothic" is a jp font */
-    font-family: "Cozette", "gothic", "Font Awesome 6 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Cozette", "gothic", "Batang", "Font Awesome 6 Free", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
 }
