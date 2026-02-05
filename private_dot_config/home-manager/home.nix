@@ -40,9 +40,12 @@
 		#nodePackages.wrangler
 		#waybar # the arch version of this has broken libs atm
 		# r lang env
-		#(rWrapper.override{ packages = with rPackages; [languageserver httpgd]; })
-		#radianWrapper
-		skrooge
+		(rWrapper.override{ packages = with rPackages; [
+			languageserver
+			#httpgd
+		]; })
+		radianWrapper
+		#skrooge
 
 		rbenv
 		pcmanfm
