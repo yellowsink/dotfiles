@@ -31,24 +31,41 @@
 
 	# Install my packages
 	home.packages = with pkgs; [
-		nodePackages.http-server
-		nodePackages.pnpm
-		nodePackages.prettier
-		nodePackages.typescript
-		nodePackages.web-ext
-		nodePackages.zx
+		#nodePackages.http-server
+		http-server
+		#nodePackages.pnpm
+		pnpm
+		#nodePackages.prettier
+		prettier
+		#nodePackages.typescript
+		typescript
+		#nodePackages.web-ext
+		web-ext
+		#nodePackages.zx
+		zx
+		#nodePackages.npm
+		# npm
+		nodejs
 		#nodePackages.wrangler
 		#waybar # the arch version of this has broken libs atm
 		# r lang env
+		R
+		rPackages.languageserver
+		rPackages.tidyverse
 		(rWrapper.override{ packages = with rPackages; [
 			languageserver
+			tidyverse
+			quarto
 			#httpgd
 		]; })
 		radianWrapper
+		quarto
 		#skrooge
 
 		rbenv
 		pcmanfm
+
+		archipelago
 	];
 
 	# Config my shell
@@ -62,7 +79,7 @@
 			cha = "chz add";
 			chy = "chz apply -v";
 			chu = "chz update -v";
-			ls = "eza --icons --colour-scale all";
+			ls = "eza --icons --color-scale=all";
 			lsl = "ls -lh --git";
 			gitc = "git commit -am";
 			gitp = "git push";
