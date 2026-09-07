@@ -14,7 +14,8 @@ while true; do
 		artist=${artist:1} title=${title:1} arturl=${arturl:1} hpos=${hpos:1} hlen=${hlen:1}
 
 		# build line
-		line="${artist:+$artist ${title:+- }}${title:+$title }${hpos:+$hpos${hlen:+|}}$hlen"
+		#line="${artist:+$artist ${title:+- }}${title:+$title }${hpos:+$hpos${hlen:+|}}$hlen"
+		line="${title:+$title ${artist:+- }}${artist:+$artist }${hpos:+$hpos${hlen:+|}}$hlen"
 		#line="${artist:+$artist ${title:+- }}${title:+$title }"
 
 		# json escaping

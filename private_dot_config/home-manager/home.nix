@@ -92,6 +92,8 @@
 
 			tsen = "tailscale set --exit-node=";
 			tsem = "tailscale set --exit-node=michiru";
+
+			ggmpeg = "ffmpeg -hide_banner -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128";
 		};
 
 		initExtra = ''
