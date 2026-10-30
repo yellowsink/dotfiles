@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
 	# Home Manager needs a bit of information about you and the
@@ -96,7 +96,7 @@
 			ggmpeg = "ffmpeg -hide_banner -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128";
 		};
 
-		initExtra = ''
+		initContent = let normal = ''
 			setopt beep extendedglob notify
 
 			eval "$(zoxide init zsh)"
@@ -135,9 +135,7 @@ EOF
 			# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 			[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 			(( ! ''${+functions[p10k]} )) || p10k finalize
-		'';
-
-		initExtraFirst = ''
+		''; early = lib.mkBefore ''
 			if [ $TERM != "tmux-256color" ]; then
 							tmux && exit
 			fi
@@ -148,11 +146,11 @@ EOF
 			if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
 				source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
 			fi
-		'';
+		''; in lib.mkMerge [ early normal ];
 
 		history = {
 			size = 1000;
-			path = ".histfile";
+			path = "\${HOME}/.histfile";
 		};
 
 		autocd = true;
